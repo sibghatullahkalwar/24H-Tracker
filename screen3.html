@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#3d4a3d",
+                    "on-surface": "#161d16",
+                    "secondary-fixed-dim": "#ffb3ad",
+                    "on-primary-fixed-variant": "#005321",
+                    "tertiary-container": "#ff8b7c",
+                    "on-background": "#161d16",
+                    "surface-container-highest": "#dce5d9",
+                    "error": "#ba1a1a",
+                    "background": "#f3fcef",
+                    "surface-container-high": "#e2ebde",
+                    "primary-fixed": "#6bff8f",
+                    "surface-container-low": "#edf6ea",
+                    "on-tertiary-fixed-variant": "#7f2a21",
+                    "surface-dim": "#d4ddd0",
+                    "tertiary": "#9e4036",
+                    "surface-bright": "#f3fcef",
+                    "on-secondary-fixed-variant": "#930013",
+                    "outline-variant": "#bccbb9",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#006e2f",
+                    "primary-container": "#22c55e",
+                    "on-secondary": "#ffffff",
+                    "outline": "#6d7b6c",
+                    "inverse-on-surface": "#ebf3e7",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "primary": "#006e2f",
+                    "on-primary-fixed": "#002109",
+                    "inverse-primary": "#4ae176",
+                    "on-secondary-fixed": "#410004",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#ffdad7",
+                    "on-primary-container": "#004b1e",
+                    "surface-container": "#e8f0e4",
+                    "secondary": "#b61722",
+                    "inverse-surface": "#2a322a",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#ffb4a9",
+                    "primary-fixed-dim": "#4ae176",
+                    "on-secondary-container": "#fffbff",
+                    "secondary-container": "#da3437",
+                    "surface": "#f3fcef",
+                    "on-tertiary-fixed": "#410001",
+                    "surface-variant": "#dce5d9",
+                    "on-tertiary-container": "#76231b",
+                    "tertiary-fixed": "#ffdad5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "0.5rem",
+                    "margin-page": "1.25rem",
+                    "stack-md": "1rem",
+                    "gutter-grid": "1rem",
+                    "stack-lg": "1.5rem",
+                    "inset-card": "1rem"
+            },
+            "fontFamily": {
+                    "display-lg": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "title-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "title-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .timer-card-shadow {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#F5F5F5] min-h-screen text-on-background pb-24">
+<!-- TopAppBar from JSON Authority -->
+<header class="bg-slate-50/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200/50 shadow-sm flex items-center justify-between px-5 h-16 w-full max-w-md mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-600" data-icon="schedule">schedule</span>
+<span class="text-xl font-extrabold text-slate-900">TimeTrack</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="text-right">
+<p class="font-title-sm text-body-md text-slate-500">Monday, Oct 23</p>
+</div>
+<button class="text-green-600 transition-colors hover:bg-slate-100 p-2 rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+</button>
+</div>
+</header>
+<main class="max-w-md mx-auto px-margin-page pt-stack-lg space-y-stack-lg">
+<!-- Primary Action: Add Section -->
+<div class="w-full">
+<button class="w-full bg-primary-container text-on-primary-container h-[56px] rounded-[16px] flex items-center justify-center gap-2 font-title-sm text-title-sm shadow-sm active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                Add Section
+            </button>
+</div>
+<!-- Section List -->
+<section class="space-y-stack-md">
+<!-- Active Timer Card -->
+<div class="bg-surface-container-lowest rounded-[16px] p-inset-card timer-card-shadow border-2 border-primary/10">
+<div class="flex justify-between items-start mb-stack-sm">
+<div class="flex-1">
+<input class="bg-transparent border-none p-0 font-headline-md text-headline-md text-on-surface focus:ring-0 w-full" type="text" value="Coding"/>
+<p class="text-on-surface-variant font-label-caps text-label-caps opacity-60">PROJECT: NEON DASHBOARD</p>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<div class="py-stack-md flex flex-col items-center">
+<h2 class="font-display-lg text-display-lg text-primary tabular-nums">02:45:12</h2>
+</div>
+<div class="flex items-center gap-stack-md pt-stack-sm">
+<button class="flex-1 bg-secondary-container text-on-secondary h-[56px] rounded-[16px] font-title-sm text-title-sm flex items-center justify-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="stop" style="font-variation-settings: 'FILL' 1;">stop</span>
+                        Stop
+                    </button>
+<button class="w-[56px] h-[56px] flex items-center justify-center rounded-[16px] bg-surface-container text-on-surface-variant active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="restart_alt">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- Inactive Card: Study -->
+<div class="bg-surface-container-lowest rounded-[16px] p-inset-card timer-card-shadow">
+<div class="flex justify-between items-start mb-stack-sm">
+<div class="flex-1">
+<input class="bg-transparent border-none p-0 font-headline-md text-headline-md text-on-surface focus:ring-0 w-full" type="text" value="Study"/>
+<p class="text-on-surface-variant font-label-caps text-label-caps opacity-60">SUBJECT: QUANTUM PHYSICS</p>
+</div>
+<button class="text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<div class="py-stack-md flex flex-col items-center">
+<h2 class="font-display-lg text-display-lg text-on-surface-variant opacity-40 tabular-nums">00:00:00</h2>
+</div>
+<div class="flex items-center gap-stack-md pt-stack-sm">
+<button class="flex-1 bg-primary-container text-on-primary-container h-[56px] rounded-[16px] font-title-sm text-title-sm flex items-center justify-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        Start
+                    </button>
+<button class="w-[56px] h-[56px] flex items-center justify-center rounded-[16px] bg-surface-container text-on-surface-variant active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="restart_alt">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- Inactive Card: Gym -->
+<div class="bg-surface-container-lowest rounded-[16px] p-inset-card timer-card-shadow">
+<div class="flex justify-between items-start mb-stack-sm">
+<div class="flex-1">
+<input class="bg-transparent border-none p-0 font-headline-md text-headline-md text-on-surface focus:ring-0 w-full" type="text" value="Gym"/>
+<p class="text-on-surface-variant font-label-caps text-label-caps opacity-60">WORKOUT: LEG DAY</p>
+</div>
+<button class="text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<div class="py-stack-md flex flex-col items-center">
+<h2 class="font-display-lg text-display-lg text-on-surface-variant opacity-40 tabular-nums">01:12:05</h2>
+</div>
+<div class="flex items-center gap-stack-md pt-stack-sm">
+<button class="flex-1 bg-primary-container text-on-primary-container h-[56px] rounded-[16px] font-title-sm text-title-sm flex items-center justify-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        Start
+                    </button>
+<button class="w-[56px] h-[56px] flex items-center justify-center rounded-[16px] bg-surface-container text-on-surface-variant active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="restart_alt">restart_alt</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Aesthetic Bento-ish Summary Element -->
+<div class="grid grid-cols-2 gap-gutter-grid">
+<div class="bg-primary/5 rounded-[16px] p-inset-card flex flex-col justify-between h-32 border border-primary/10">
+<span class="material-symbols-outlined text-primary" data-icon="trending_up">trending_up</span>
+<div>
+<p class="font-label-caps text-label-caps text-primary uppercase">Daily Goal</p>
+<p class="font-headline-md text-headline-md text-on-surface">82%</p>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-[16px] p-inset-card flex flex-col justify-between h-32">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="history">history</span>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">Total Today</p>
+<p class="font-headline-md text-headline-md text-on-surface">6h 12m</p>
+</div>
+</div>
+</div>
+<!-- Aesthetic Image Divider -->
+<div class="rounded-[16px] overflow-hidden h-32 relative shadow-lg">
+<img class="w-full h-full object-cover grayscale brightness-50" data-alt="A cinematic, high-contrast overhead shot of a clean, minimalist wooden desk workspace. The scene features a modern laptop, a sleek ceramic coffee mug, and a single green plant, bathed in soft morning light coming from a nearby window. The atmosphere is calm and focused, reflecting a professional time-management aesthetic with a palette of soft whites, deep shadows, and natural wood tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoFDDSSiGAaug56FWF4MYAxbNEwvV33MDVWwpFmhPikXiIIl6IdLbVc7MYHhZyOQ7SHgatlDJ1wY3Hw7M5DtnZd3nzcq_71azhLdlvPTSxmfDsH4NMkgL83uMPBgjTOADjBYJLuUwqsPLyK548t8j81u-pvOiMa0iSJd6gl5KpM2Fb13_LYjgKA5nDR9abtvAjsLdUKLygY68qemt8eje_HPPlPXBye_MywO2W2vbH9uMaDzdfLQDqlFHVEYhF9XwN6FSCrP6a3rE"/>
+<div class="absolute inset-0 flex items-center px-inset-card">
+<p class="text-white font-title-sm text-title-sm drop-shadow-md">Stay focused, you're doing great.</p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar from JSON Authority -->
+<nav class="fixed bottom-0 left-0 right-0 h-20 bg-white/90 backdrop-blur-lg flex justify-around items-center px-8 pb-4 z-50 border-t border-slate-100 max-w-md mx-auto shadow-[0_-4px_20px_rgba(0,0,0,0.05)] rounded-t-2xl">
+<!-- Active Item: Tracker -->
+<button class="flex flex-col items-center justify-center text-green-600 gap-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="timer" style="font-variation-settings: 'FILL' 1;">timer</span>
+<span class="text-[11px] font-medium uppercase tracking-wider">Tracker</span>
+</button>
+<!-- Inactive Item: Reports -->
+<button class="flex flex-col items-center justify-center text-slate-400 gap-1 hover:opacity-80 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="bar_chart">bar_chart</span>
+<span class="text-[11px] font-medium uppercase tracking-wider">Reports</span>
+</button>
+</nav>
+</body></html>
